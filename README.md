@@ -27,4 +27,4 @@ The [Mastra platform](https://projects.mastra.ai) provides two products for depl
 - **Studio**: A hosted visual environment for testing agents, running workflows, and inspecting traces
 - **Server**: A production deployment target that runs your Mastra application as an API server
 
-Learn more in the [Mastra platform documentation](https://mastra.ai/docs/mastra-platform/overview).
+Learn more in the [Mastra platform documentation](https://mastra.ai/docs/mastra-platform/overview).# support-agent
