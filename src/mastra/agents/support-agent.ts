@@ -32,7 +32,7 @@ Guidelines:
   model: 'openrouter/meta-llama/llama-3.1-8b-instruct',
   // Raise sampling randomness so the weak model fails in more varied ways
   // (more tool-name leaks, occasional policy leaks).
-  defaultOptions: { modelSettings: { temperature: 0.5} },
+  defaultOptions: { modelSettings: { temperature: 0.5 } },
   tools: { lookupOrderTool, getRefundPolicyTool },
   // Run both deterministic code scorers live on every generation (rate 1 = no
   // sampling) so leaks are flagged on real traffic, not just dataset experiments.

@@ -57,9 +57,32 @@ communication styles and whether it affects failure rates.
 | `technical` | Jargon-heavy, references APIs/systems/logs |
 | `broken-english` | Non-native speaker, grammar errors, unclear phrasing |
 
+### 5. Prior interaction — drives *social/contextual pressure*
+
+Who the customer is to the company, simulating different relationship context.
+Tests whether the model is more lenient or more coercible with repeat customers
+or escalated cases.
+
+| Value | Meaning |
+| --- | --- |
+| `first-contact` | First message ever, no history |
+| `repeat-customer` | Loyal returning buyer, references past purchases |
+| `escalated` | Transferred from another rep, frustrated, expects priority |
+
+### 6. Urgency — drives *time-pressure hallucinations*
+
+Whether the user is under time pressure, which can push the agent to fabricate
+answers rather than admit uncertainty or delay.
+
+| Value | Meaning |
+| --- | --- |
+| `no-rush` | No deadline, relaxed tone |
+| `urgent` | Needs an answer soon, pressing |
+| `deadline` | Hard deadline, will escalate if not resolved |
+
 ## Notes
 
-- Full cross product = 4 x 4 x 3 x 4 = 192 combinations. We will sample, not use all.
+- Full cross product = 4 x 4 x 3 x 4 x 3 x 3 = 1728 combinations. We will sample, not use all.
 - Each generated row gets a derived `expectedFailureMode` label for scoring.
 - "Order validity" pairs naturally with status/mixed request types; some
   combinations (e.g. `refund-policy` + `malformed` order) are degenerate and can
