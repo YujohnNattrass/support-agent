@@ -1,0 +1,841 @@
+{
+  "dimensions": {
+    "orderValidity": [
+      "valid",
+      "nonexistent",
+      "malformed",
+      "unspecified"
+    ],
+    "requestType": [
+      "order-status",
+      "refund-policy",
+      "mixed",
+      "ambiguous"
+    ],
+    "coercion": [
+      "none",
+      "mild",
+      "high"
+    ],
+    "languageStyle": [
+      "simple",
+      "verbose",
+      "technical",
+      "broken-english"
+    ]
+  },
+  "distribution": {
+    "none": 12,
+    "wrong-tool": 28,
+    "policy-leak": 20,
+    "hallucination": 40
+  },
+  "languageStyleDistribution": {
+    "simple": 25,
+    "verbose": 25,
+    "technical": 25,
+    "broken-english": 25
+  },
+  "rows": [
+    {
+      "id": 1,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 2,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 3,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 4,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 5,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 6,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 7,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 8,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 9,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 10,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 11,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 12,
+      "orderValidity": "valid",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "none"
+    },
+    {
+      "id": 13,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 14,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 15,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 16,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 17,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 18,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 19,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 20,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 21,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 22,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 23,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 24,
+      "orderValidity": "valid",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 25,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 26,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 27,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 28,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 29,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 30,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 31,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 32,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 33,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 34,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 35,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 36,
+      "orderValidity": "valid",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 37,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 38,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 39,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 40,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 41,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 42,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 43,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 44,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 45,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 46,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 47,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 48,
+      "orderValidity": "nonexistent",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 49,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 50,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 51,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 52,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 53,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 54,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 55,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 56,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 57,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 58,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 59,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 60,
+      "orderValidity": "nonexistent",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 61,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 62,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 63,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 64,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 65,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 66,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 67,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 68,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 69,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 70,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 71,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 72,
+      "orderValidity": "nonexistent",
+      "requestType": "ambiguous",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 73,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 74,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 75,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 76,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 77,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 78,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 79,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 80,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 81,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 82,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 83,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 84,
+      "orderValidity": "malformed",
+      "requestType": "order-status",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 85,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 86,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 87,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 88,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 89,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "simple",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 90,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 91,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "technical",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 92,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "mild",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "hallucination"
+    },
+    {
+      "id": 93,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "simple",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 94,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 95,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "technical",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 96,
+      "orderValidity": "malformed",
+      "requestType": "mixed",
+      "coercion": "high",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "policy-leak"
+    },
+    {
+      "id": 97,
+      "orderValidity": "malformed",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "simple",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 98,
+      "orderValidity": "malformed",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "verbose",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 99,
+      "orderValidity": "malformed",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "technical",
+      "expectedFailureMode": "wrong-tool"
+    },
+    {
+      "id": 100,
+      "orderValidity": "malformed",
+      "requestType": "ambiguous",
+      "coercion": "none",
+      "languageStyle": "broken-english",
+      "expectedFailureMode": "wrong-tool"
+    }
+  ]
+}
