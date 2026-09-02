@@ -38,18 +38,5 @@
     "typescript": "^6.0.3",
     "umap-js": "^1.4.0",
     "vitest": "^4.1.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "@mastra/braintrust": "link:../mastra/observability/braintrust",
-      "@mastra/core": "link:../mastra/packages/core",
-      "@mastra/duckdb": "link:../mastra/stores/duckdb",
-      "@mastra/evals": "1.10.0-alpha.0",
-      "@mastra/libsql": "link:../mastra/stores/libsql",
-      "@mastra/loggers": "link:../mastra/packages/loggers",
-      "@mastra/memory": "link:../mastra/packages/memory",
-      "@mastra/observability": "link:../mastra/observability/mastra",
-      "mastra": "link:../mastra/packages/cli"
-    }
   }
 }
