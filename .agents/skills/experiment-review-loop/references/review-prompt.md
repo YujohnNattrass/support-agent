@@ -11,11 +11,11 @@ Analyze the latest Mastra dataset experiment at [MASTRA_URL].
 4. Detect potential behavioral and infrastructure failures. Keep detector signals provisional and cite evidence for each one.
 5. Distinguish actual tool spans from tool syntax printed in assistant text. Distinguish real policy leakage from fabricated policy claims. Keep provider/tool-call serialization errors separate from agent behavior.
 6. Generate embeddings, a deterministic UMAP projection, clusters, and interactive JSON and HTML reports under docs/.
-7. Automatically queue six diverse review samples, preferring trace-backed representatives and including no more than one no-trace infrastructure failure. Add only machine-generated cluster/signal tags and verify the samples are visible in Studio.
-8. Read any completed human reviews, comments, and observability feedback already present. Re-read their traces and use that evidence to correct the taxonomy.
-9. Apply the learned rubric to unreviewed candidates, update machine-generated tags and reports, and queue the next review batch when the queue is empty.
+7. Automatically queue six diverse review samples, preferring trace-backed representatives and including no more than one no-trace infrastructure failure. Add only machine-generated cluster/signal tags and verify the samples in **Inbox → Dataset items**.
+8. Read every `needs-review` record in **Inbox → Feedback** for this experiment. Correlate it by `sourceId`, falling back to `traceId`, then re-read the trace and use that evidence to correct the taxonomy. After successfully incorporating a feedback record, mark that feedback record `reviewed`; leave ambiguous or uncorrelated feedback pending.
+9. Apply the learned rubric to unreviewed candidates, update machine-generated tags and reports, then replenish **Inbox → Dataset items** back to six pending samples without resetting completed or reviewed results.
 
-Never submit ratings, write human comments, or mark reviews complete for me. Always report exact result IDs, trace IDs when available, report paths, queue counts, automated changes, and any API, Studio pagination, missing-trace, or inference-provider limitations.
+Never submit ratings, write human comments, or mark dataset experiment results complete for me. Marking a consumed feedback inbox record reviewed is allowed and does not complete the dataset item or alter its trace. Always report exact result IDs, trace IDs when available, report paths, queue counts, feedback consumed, automated changes, and any API, Studio, missing-trace, or inference-provider limitations.
 ```
 
 Replace `[MASTRA_URL]` with the active Studio/server URL, normally `http://localhost:4111`.

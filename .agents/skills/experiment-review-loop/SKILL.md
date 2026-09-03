@@ -1,10 +1,10 @@
 ---
 name: experiment-review-loop
-description: "Analyze Mastra dataset experiment results, detect and cluster potential failures with embeddings and UMAP, generate an interactive HTML report, send representative results to the Studio review queue, ingest human comments and feedback, and re-review traces. Use when asked to analyze an experiment, cluster failures, prepare review samples, or learn from completed experiment reviews."
+description: "Analyze Mastra dataset experiment results, cluster potential failures with embeddings and UMAP, queue representative results in Studio Inbox, consume Inbox feedback, and re-review traces using the learned rubric. Use when asked to analyze an experiment, prepare review samples, or learn from human feedback."
 license: Apache-2.0
 metadata:
   author: support-agent
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Mastra Experiment Review Loop
@@ -35,11 +35,13 @@ A normal skill run automatically:
 - analyzes the selected experiment;
 - generates the cluster reports;
 - queues representative samples with `needs-review` and machine-generated tags;
-- ingests any human feedback already present;
-- re-reviews unreviewed results; and
-- regenerates machine-generated reports and tags when feedback changes the taxonomy.
+- ingests human feedback waiting in **Inbox → Feedback**;
+- marks each feedback inbox record `reviewed` only after its evidence has been incorporated;
+- re-reviews unreviewed results;
+- regenerates machine-generated reports and tags when feedback changes the taxonomy; and
+- replenishes **Inbox → Dataset items** with representative experiment results up to the configured review sample size.
 
-These machine operations do not require a separate approval. Never submit a rating, write a human comment, or mark an item complete on the user's behalf. Those actions represent the human reviewer and remain human-only.
+These machine operations do not require a separate approval. Never submit a rating, write a human comment, or mark a dataset experiment result complete on the user's behalf. Those actions represent the human reviewer and remain human-only. Marking a feedback inbox record `reviewed` only acknowledges that the skill consumed that feedback; it does not alter the associated trace or complete the dataset review item.
 
 ## Phase 1: Load complete experiment evidence
 
@@ -149,24 +151,34 @@ Suggested body:
 }
 ```
 
-Then verify both the API review count and the visible Studio queue. If the API reports queued items but Studio does not show them, inspect pagination behavior. Do not claim success until the items are visible. The current Studio version may only load the first result page; if so, disclose the limitation and choose a visible smoke-test sample rather than silently losing items.
+Then verify both the API review count and **Inbox → Dataset items** in Studio. The current Inbox implementation paginates through every experiment and every experiment result, so queued items should not depend on their position in the result list. Do not claim success until the items are visible. If counts disagree, disclose the API/UI mismatch and investigate it instead of re-queueing duplicates.
 
-## Phase 5: Ingest human reviews
+## Phase 5: Consume Inbox feedback
 
 On every skill run, and whenever the user says they added feedback:
 
-1. Re-fetch all experiment results and identify `complete`, `reviewed`, and commented items that have not yet been incorporated into the analysis.
-2. Fetch experiment feedback:
+1. Re-fetch all experiment results and index them by result ID and trace ID.
+2. Fetch every feedback record waiting in **Inbox → Feedback**, newest first and with full pagination:
 
    ```text
    GET /api/observability/feedback
+   filters: { experimentId: <experiment-id>, reviewStatus: "needs-review" }
+   orderBy: { field: "timestamp", direction: "DESC" }
    ```
 
-   Filter by `experimentId`. Correlate feedback to results using `sourceId`; use `traceId` to retrieve evidence.
-3. Treat the experiment result's comment as authoritative when a result has no trace or no feedback record.
-4. Fetch and inspect each reviewed trace, including tool spans and their inputs/results.
-5. Compare the human comment with the original detector signals and cluster assignment.
-6. State agreements, missed failures, false positives, and taxonomy corrections.
+   Prefer server-side filters when supported. Otherwise fetch all pages and filter locally by `experimentId` and `reviewStatus`.
+3. Correlate each feedback record to an experiment result using `sourceId`. If `sourceId` is absent, match its `traceId` to the result's trace ID. Never match on feedback text alone.
+4. Treat the experiment result's comment as fallback evidence when a result has no trace or no feedback record.
+5. Fetch and inspect each correlated trace, including tool spans and their inputs/results.
+6. Compare the feedback value/comment with the original detector signals and cluster assignment. State agreements, missed failures, false positives, and taxonomy corrections.
+7. Only after the feedback has been incorporated into the revised rubric, tags, and reports, acknowledge it by calling:
+
+   ```text
+   PATCH /api/observability/feedback/:feedbackId/review-status
+   { "reviewStatus": "reviewed" }
+   ```
+
+   Leave uncorrelated, ambiguous, or failed-to-process feedback as `needs-review` and report why. Never use this endpoint to mark a dataset experiment result complete.
 
 Do not flatten these distinctions:
 
@@ -187,7 +199,17 @@ Do not write suggested feedback into the human comment or rating fields. Report:
 - Detector rules changed
 - Samples selected for the next human-review batch
 
-Rerun embeddings/UMAP when the taxonomy changes, regenerate both report files, and show a before/after cluster summary. Queue the next representative batch automatically when no items are currently awaiting human review.
+Rerun embeddings/UMAP when the taxonomy changes, regenerate both report files, and show a before/after cluster summary.
+
+After consuming Inbox feedback, replenish **Inbox → Dataset items** up to the configured review sample size (default 6):
+
+1. Count current experiment results whose status is `needs-review`.
+2. Compute `slots = max(0, sampleSize - needsReviewCount)`.
+3. Select that many diverse, unreviewed, not-already-queued candidates using the Phase 4 rules and the revised rubric.
+4. Queue them with machine-generated `cluster:*` and `signal:*` tags.
+5. Verify the final count and visible items in Inbox.
+
+Do not reset or re-queue `complete` or `reviewed` results. Do not select results whose feedback remains ambiguous or unprocessed merely to fill the batch.
 
 ## Output contract
 

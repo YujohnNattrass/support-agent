@@ -4,12 +4,13 @@ Review the samples selected by the skill, then let it learn from your feedback a
 
 ## 1. Review the samples
 
-1. Open the latest experiment in Mastra Studio.
-2. Open its **Review queue**.
-3. Inspect each sample's input, output, error, tags, and trace.
-4. Rate the result when appropriate.
-5. Add a short comment describing the specific failure or why the response is acceptable.
-6. Select **Mark as complete**.
+1. Open **Inbox → Dataset items** in Mastra Studio.
+2. Inspect each sample's input, output, error, tags, and trace.
+3. Rate the result when appropriate.
+4. Add a short comment describing the specific failure or why the response is acceptable.
+5. Select **Mark as complete**.
+
+Your comments also appear in **Inbox → Feedback**, where the skill can consume them and connect them back to the result and trace.
 
 Use evidence-based comments:
 
@@ -32,14 +33,15 @@ I added human feedback. Ingest it and continue automatically.
 
 The skill will:
 
-- read the latest completed reviews, comments, and ratings;
-- re-read the reviewed traces;
+- read `needs-review` records from **Inbox → Feedback**;
+- connect each record to its result and trace;
 - identify agreements, false positives, and missed failures;
 - re-review the remaining results using the learned rubric;
-- update machine-generated tags and cluster reports; and
-- queue another representative batch when the review queue is empty.
+- update machine-generated tags and cluster reports;
+- mark successfully consumed feedback records `reviewed`; and
+- replenish **Inbox → Dataset items** to six pending samples.
 
-It will not submit ratings, write human comments, or mark reviews complete for you.
+It will not submit ratings, write human comments, or mark dataset items complete for you.
 
 ## Use clusters to choose scorers
 
