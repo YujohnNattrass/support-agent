@@ -21,19 +21,19 @@
     "node": ">=22.13.0"
   },
   "dependencies": {
-    "@mastra/braintrust": "latest",
-    "@mastra/core": "latest",
-    "@mastra/duckdb": "latest",
-    "@mastra/evals": "1.10.0-alpha.0",
-    "@mastra/libsql": "latest",
-    "@mastra/loggers": "latest",
-    "@mastra/memory": "latest",
-    "@mastra/observability": "latest",
+    "@mastra/braintrust": "workshop-yj",
+    "@mastra/core": "workshop-yj",
+    "@mastra/duckdb": "workshop-yj",
+    "@mastra/evals": "workshop-yj",
+    "@mastra/libsql": "workshop-yj",
+    "@mastra/loggers": "workshop-yj",
+    "@mastra/memory": "workshop-yj",
+    "@mastra/observability": "workshop-yj",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",
-    "mastra": "latest",
+    "mastra": "workshop-yj",
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
     "umap-js": "^1.4.0",

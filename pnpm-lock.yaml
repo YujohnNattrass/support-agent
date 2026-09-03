@@ -9,29 +9,29 @@ importers:
   .:
     dependencies:
       '@mastra/braintrust':
-        specifier: latest
-        version: 1.3.9(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
       '@mastra/core':
-        specifier: latest
-        version: 1.63.2(express@5.2.1)(zod@4.5.4)
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
       '@mastra/duckdb':
-        specifier: latest
-        version: 1.6.3(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))
       '@mastra/evals':
-        specifier: 1.10.0-alpha.0
-        version: 1.10.0-alpha.0(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(vitest@4.1.11(@types/node@25.9.5)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0)))
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(vitest@4.1.11(@types/node@25.9.5)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0)))
       '@mastra/libsql':
-        specifier: latest
-        version: 1.22.2(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))
       '@mastra/loggers':
-        specifier: latest
-        version: 1.3.0(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))
       '@mastra/memory':
-        specifier: latest
-        version: 1.28.1(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))
       '@mastra/observability':
-        specifier: latest
-        version: 1.17.4(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
       zod:
         specifier: ^4.4.3
         version: 4.5.4
@@ -40,8 +40,8 @@ importers:
         specifier: ^25.9.1
         version: 25.9.5
       mastra:
-        specifier: latest
-        version: 1.27.2(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)
+        specifier: workshop-yj
+        version: 0.0.0-workshop-yj-20260903030708(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)
       tsx:
         specifier: ^4.23.13
         version: 4.23.13
@@ -86,12 +86,6 @@ packages:
         optional: true
       express:
         optional: true
-
-  '@ai-sdk/provider-utils@3.0.30':
-    resolution: {integrity: sha512-NCJ9JKow5ENAgEZxzvEvF20thwDiH+hutvzmrUDbloRX0azpJHNst8+7pZIVryYhLM9wgpT5/ShTSjPTFhkxEQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4.1.8
 
   '@ai-sdk/provider-utils@4.0.40':
     resolution: {integrity: sha512-OL5IrpUm9Y8Dwy+w/vvFwPotS6m52O9W0op2oXgXdCROMJIBalBI0oro6OIBYkPxvm5Xg02GSkoQN25RlR0bnw==}
@@ -758,77 +752,77 @@ packages:
     resolution: {integrity: sha512-qC72D4+CDdjGqJvkFMMEAtancHUQ7/d/tAiHf64z8MopFDmcrtbcJuerDtFceuAfQJ2pDSfCKCtbqoGBNnwg0w==}
     engines: {node: '>=8'}
 
-  '@mastra/braintrust@1.3.9':
-    resolution: {integrity: sha512-G0J4r6DQLtJCphq2aDmOOb1R9QKM5nLGjQYimB7Akd3IFjZ4v8+xpzlpqT4x5urVcNNWhseFZX24x0uW6bBkCQ==}
+  '@mastra/braintrust@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-8LOc9qWy3brbaHoKNj2/NMyfFHYt8VZdlIavuYSZtFirUuUqdprEjK+ZWwHhpiqWudyT7nhfwPVO+SqG1jzDWg==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.16.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
       zod: ^3.25.34 || ^4.0.0
 
-  '@mastra/core@1.63.2':
-    resolution: {integrity: sha512-BHVDF4GtQnIqRND/lPVVoTnmoNzZ7+voz+EpI4YSY0W7In6c/EOrmMnshuNQSDJ9NpxQNrwip0WGYpRYwzFirQ==}
+  '@mastra/core@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-82VsnFeJVTec0ANC4MhQeur6ZmavpQiqK5IBwLc1AZ+BkvJdioQTfH1RzcvDCyUV89ibRulnLnTJW5XXpj9Fgg==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  '@mastra/deployer@1.63.2':
-    resolution: {integrity: sha512-4lU+Vv9YnWOffX/GG1bDn7fMHild3cDR7YHuQqf2rUG3rMQvZV84Y+tlRlHR7VCl/sK1HsclxoYePGINmjAl/Q==}
+  '@mastra/deployer@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-4LooMzrbvKXzS3DYBU2GrmO60HwJi0tkkNzzcUfWumJ8dmQLFkA7Oqzpmn6lk0b5gF9oA2NsPwRmGU2p6Uq1eg==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.50.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
-  '@mastra/duckdb@1.6.3':
-    resolution: {integrity: sha512-aM+I3T2/YYS0ti2DUnnQMLjEZoePNH2dLXc3uvS7LHhY4euqAueyMZZbT5/y57GunkaBqZN2qCrCCgne7/rc/w==}
+  '@mastra/duckdb@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-qi98rVLfly9Mt8acoplOIVTOXmg8q1wVJnd0gUbQgi7dE56sMJ4zuWjPhmiHeRkHB3C5TEIg03wS0ma3W0TyMA==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.57.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
-  '@mastra/evals@1.10.0-alpha.0':
-    resolution: {integrity: sha512-sD4kfLQwX0LlmJ9CVvk0MfR+Mvwt1+Ye5oJo3YOuZ+oM4iHGYOnbrBoIWolNNcPZOGH/lZXYIEEzdlrpBymXaw==}
+  '@mastra/evals@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-kIGQ6CivphKJNCtGRRZouXTSF5N19aQ1SfcP1evUxZ15NXCNCcRH0M1omNDcaz7RtLC/eFAmkaTak4qHQnxQug==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.0.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
       vitest: '>=3.0.0 <5.0.0'
     peerDependenciesMeta:
       vitest:
         optional: true
 
-  '@mastra/libsql@1.22.2':
-    resolution: {integrity: sha512-Nr21NY1VhalnpVAkD3tl/LpsBOD6nXrt5si0cR3K2be+rAUWXH6ncBs+KijEfugINDwl9JkseEwpMncYXjhWZQ==}
+  '@mastra/libsql@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-GJVQSjF9as8xvp7N7XfESCaCYfKi2o8VoNQBFAj5Ms9/f2KXkwnolf1hddVNi6N6oJZ/x8oTUBjVHTLtze1twQ==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.63.1-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
-  '@mastra/loggers@1.3.0':
-    resolution: {integrity: sha512-xqPce9tCQeWEuaFeCQwchnImtAuiSayWNb3d8kXlFEHSsXz6fdWvvvAsKFWiBZaJaC/vGPgB0Bhhjg7l8pJDJQ==}
+  '@mastra/loggers@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-NBy+MMsov9d1Cp7pRs/VAAon+8MqovsICQNom7n/Hac/MZd8e27jVmR3GTfRb0227qZqMEDFyuFJTlICYPeK6Q==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.0.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
-  '@mastra/memory@1.28.1':
-    resolution: {integrity: sha512-ZMKblBgsr7mVBVqsZTT2DYZ7yzCQq7Zc9iEsHrDDSFSa8s9k4ysS7fXNNWUzLzzr7jOiHtvrg6fmfH32snEy5w==}
+  '@mastra/memory@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-Y4tYCDizIPFYShy+LrOemABZTH14gumnaHJ83ir+BShwUenacDI7a1OE5Xgoh1hdDPkzIcHwkLUqJibrpN91iw==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.4.1-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
-  '@mastra/observability@1.17.4':
-    resolution: {integrity: sha512-7TzbNNPR6h1LPUPW+kPkqqBKyubF9fZapGWJF4Y2f5JAhGva8Qj/NX0hbDgx54hqtvkTNh56+flAerwuNf1mMw==}
+  '@mastra/observability@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-N52fqSuM5uoBxiMvcEvfzMhQ7BUdgWGflf8YGAStAyKtlrV9KUSVoH6NoGOU7CcZqaquNhriFgxn2iYSGCM79g==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.16.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
       zod: ^3.25.0 || ^4.0.0
 
-  '@mastra/schema-compat@1.3.7':
-    resolution: {integrity: sha512-06WfY+j9rulYnDp8CM7pL7JIyrntkMolqmyyb1VJNEzlYTQCIcJcY0SwQiubZv2tztmoYGikszDiRVyXp0E9gA==}
+  '@mastra/schema-compat@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-x1+bS6r0BtLTfnbV7RZP4/Km9Z60cpEEOauskCa5KzOwjMjwhokuvTrxkt2TiPNkBreP+GysKX7h9XGhsiaDjg==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  '@mastra/server@1.63.2':
-    resolution: {integrity: sha512-Bered/g7K+MhDKdYb3qkmtTS93Hf/Qb78EZGxGQSwVjizuPRguFJZr5nTckE4VzQxqY6Tg7v4Jqjc6afugO3oQ==}
+  '@mastra/server@0.0.0-workshop-yj-20260903030708':
+    resolution: {integrity: sha512-jZJPNlpkcIEk6Ir/Es0dNNIsAlxdTzQ4CfcAWoG0bzRlCHhPmt6Hont8Plt+dIfD3gFhSK3R2EWqndjeIdr2Rw==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
-      '@mastra/core': '>=1.50.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
       zod: ^3.25.0 || ^4.0.0
 
   '@modelcontextprotocol/core@2.0.0':
@@ -1406,8 +1400,8 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  braintrust@3.29.0:
-    resolution: {integrity: sha512-VM6HVz5ydoIgIuWO9Nv8TmLA1RIBCe9qxuGHN4l//TG9s3UjeNCl006TU4mg3xZOGx2qqCMUpI2RTgfdBfQiSw==}
+  braintrust@3.30.0:
+    resolution: {integrity: sha512-F0TWmhAyvC6b8QgrKRZsVz3xcQN4I2fVHpkeUVEic57bvWg7szfW9RvA5BX5M4qSmp9XCH7QytX0m0vsCzgjIg==}
     hasBin: true
     peerDependencies:
       zod: ^3.25.34 || ^4.0
@@ -2134,12 +2128,12 @@ packages:
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
-  mastra@1.27.2:
-    resolution: {integrity: sha512-RYkMpNbKXSLJhq0DhNmpSKf3+RaySg56Zg4rlQTMFGIYp6aE/d7PTQWORTAfVra33h2gJkS7t+d6R+iFGOLEIA==}
+  mastra@0.0.0-workshop-yj-20260903030708:
+    resolution: {integrity: sha512-WAXFZW+yP/8bQTfHTva3CffFiJ8gCp/mBgE6xmvQAupa4PWj7fTFodloeJRhViVReEwKP4hus4vtK2yGOMn1XA==}
     engines: {node: '>=22.13.0'}
     hasBin: true
     peerDependencies:
-      '@mastra/core': '>=1.50.0-0 <2.0.0-0'
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -3058,13 +3052,6 @@ snapshots:
     optionalDependencies:
       express: 5.2.1
 
-  '@ai-sdk/provider-utils@3.0.30(zod@4.5.4)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.3
-      '@standard-schema/spec': 1.1.0
-      eventsource-parser: 3.1.1
-      zod: 4.5.4
-
   '@ai-sdk/provider-utils@4.0.40(zod@4.5.4)':
     dependencies:
       '@ai-sdk/provider': 3.0.14
@@ -3593,21 +3580,20 @@ snapshots:
     dependencies:
       '@lukeed/csprng': 1.1.0
 
-  '@mastra/braintrust@1.3.9(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
+  '@mastra/braintrust@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
-      '@mastra/observability': 1.17.4(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
-      braintrust: 3.29.0(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
+      '@mastra/observability': 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
+      braintrust: 3.30.0(zod@4.5.4)
       zod: 4.5.4
     transitivePeerDependencies:
       - '@aws-sdk/credential-provider-web-identity'
       - supports-color
 
-  '@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4)':
+  '@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)':
     dependencies:
       '@a2a-js/sdk-v0_3': '@a2a-js/sdk@0.3.14(express@5.2.1)'
       '@a2a-js/sdk-v1': '@a2a-js/sdk@1.0.1(express@5.2.1)'
-      '@ai-sdk/provider-utils-v5': '@ai-sdk/provider-utils@3.0.30(zod@4.5.4)'
       '@ai-sdk/provider-utils-v6': '@ai-sdk/provider-utils@4.0.40(zod@4.5.4)'
       '@ai-sdk/provider-utils-v7': '@ai-sdk/provider-utils@5.0.13(zod@4.5.4)'
       '@ai-sdk/provider-v5': '@ai-sdk/provider@2.0.3'
@@ -3615,7 +3601,7 @@ snapshots:
       '@ai-sdk/provider-v7': '@ai-sdk/provider@4.0.4'
       '@isaacs/ttlcache': 2.1.5
       '@lukeed/uuid': 2.0.1
-      '@mastra/schema-compat': 1.3.7(zod@4.5.4)
+      '@mastra/schema-compat': 0.0.0-workshop-yj-20260903030708(zod@4.5.4)
       '@modelcontextprotocol/server': 2.0.0
       '@sindresorhus/slugify': 2.2.1
       '@standard-schema/spec': 1.1.0
@@ -3649,14 +3635,14 @@ snapshots:
       - utf-8-validate
       - workflow
 
-  '@mastra/deployer@1.63.2(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)':
+  '@mastra/deployer@0.0.0-workshop-yj-20260903030708(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)':
     dependencies:
       '@babel/core': 8.0.1
       '@babel/preset-typescript': 8.0.1(@babel/core@8.0.1)
       '@babel/traverse': 8.0.4
       '@hono/node-ws': 1.3.1(@hono/node-server@1.19.17(hono@4.13.5))(hono@4.13.5)
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
-      '@mastra/server': 1.63.2(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
+      '@mastra/server': 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)
       '@optimize-lodash/rollup-plugin': 5.1.0(rollup@4.63.1)
       '@rollup/plugin-commonjs': 29.0.2(rollup@4.63.1)
       '@rollup/plugin-esm-shim': 0.1.8(rollup@4.63.1)
@@ -3687,14 +3673,14 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@mastra/duckdb@1.6.3(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))':
+  '@mastra/duckdb@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))':
     dependencies:
       '@duckdb/node-api': 1.5.2-r.2
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
 
-  '@mastra/evals@1.10.0-alpha.0(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(vitest@4.1.11(@types/node@25.9.5)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0)))':
+  '@mastra/evals@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(vitest@4.1.11(@types/node@25.9.5)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0)))':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
       compromise: 14.16.0
       keyword-extractor: 0.0.28
       sentiment: 5.0.2
@@ -3702,24 +3688,24 @@ snapshots:
     optionalDependencies:
       vitest: 4.1.11(@types/node@25.9.5)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0))
 
-  '@mastra/libsql@1.22.2(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))':
+  '@mastra/libsql@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))':
     dependencies:
       '@libsql/client': 0.17.4
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@mastra/loggers@1.3.0(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))':
+  '@mastra/loggers@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
       pino: 10.3.1
       pino-pretty: 13.1.3
 
-  '@mastra/memory@1.28.1(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))':
+  '@mastra/memory@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
-      '@mastra/schema-compat': 1.3.7(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
+      '@mastra/schema-compat': 0.0.0-workshop-yj-20260903030708(zod@4.5.4)
       async-mutex: 0.5.0
       diff: 8.0.4
       json-schema: 0.4.0
@@ -3731,20 +3717,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mastra/observability@1.17.4(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
+  '@mastra/observability@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
       zod: 4.5.4
 
-  '@mastra/schema-compat@1.3.7(zod@4.5.4)':
+  '@mastra/schema-compat@0.0.0-workshop-yj-20260903030708(zod@4.5.4)':
     dependencies:
       json-schema-to-zod: 2.8.1
       zod: 4.5.4
       zod-from-json-schema: 0.5.6
 
-  '@mastra/server@1.63.2(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
+  '@mastra/server@0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(zod@4.5.4)':
     dependencies:
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
       hono: 4.13.5
       zod: 4.5.4
 
@@ -4189,7 +4175,7 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  braintrust@3.29.0(zod@4.5.4):
+  braintrust@3.30.0(zod@4.5.4):
     dependencies:
       '@next/env': 14.2.35
       '@vercel/functions': 1.6.0
@@ -4904,15 +4890,15 @@ snapshots:
 
   markdown-table@3.0.4: {}
 
-  mastra@1.27.2(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4):
+  mastra@0.0.0-workshop-yj-20260903030708(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4):
     dependencies:
       '@babel/parser': 8.0.4
       '@babel/types': 8.0.4
       '@clack/prompts': 1.7.0
       '@expo/devcert': 1.2.1
-      '@mastra/core': 1.63.2(express@5.2.1)(zod@4.5.4)
-      '@mastra/deployer': 1.63.2(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)
-      '@mastra/loggers': 1.3.0(@mastra/core@1.63.2(express@5.2.1)(zod@4.5.4))
+      '@mastra/core': 0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4)
+      '@mastra/deployer': 0.0.0-workshop-yj-20260903030708(@hono/node-server@1.19.17(hono@4.13.5))(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))(typescript@6.0.3)(zod@4.5.4)
+      '@mastra/loggers': 0.0.0-workshop-yj-20260903030708(@mastra/core@0.0.0-workshop-yj-20260903030708(express@5.2.1)(zod@4.5.4))
       archiver: 8.0.0
       commander: 14.0.3
       dotenv: 17.4.2
