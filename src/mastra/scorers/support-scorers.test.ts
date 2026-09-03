@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { policyLeakScorer, toolNameLeakScorer } from './support-scorers';
+import { extractOrderLookupEvidence, policyLeakScorer, toolNameLeakScorer } from './support-scorers';
 
 // Helper: run a scorer against a given agent output shape and return the score.
 async function score(scorer: { run: (args: never) => Promise<{ score: number }> }, output: unknown): Promise<number> {
@@ -83,6 +83,77 @@ describe('toolNameLeakScorer', () => {
   it('handles a plain string output', async () => {
     expect(await score(toolNameLeakScorer, 'lookupOrderTool')).toBe(0);
     expect(await score(toolNameLeakScorer, 'all good here')).toBe(1);
+  });
+});
+
+describe('extractOrderLookupEvidence', () => {
+  it('extracts lookup results from live scorer message output', () => {
+    const output = [
+      {
+        role: 'assistant',
+        content: {
+          toolInvocations: [
+            {
+              state: 'result',
+              toolName: 'lookupOrderTool',
+              toolCallId: 'call-1',
+              args: { orderId: 'Z999' },
+              result: { found: false },
+            },
+            {
+              state: 'result',
+              toolName: 'getRefundPolicyTool',
+              toolCallId: 'call-2',
+              args: {},
+              result: { publicPolicy: 'Refunds are available within 30 days.' },
+            },
+          ],
+        },
+      },
+    ];
+
+    expect(extractOrderLookupEvidence(output)).toEqual([
+      { orderId: 'Z999', result: { found: false } },
+    ]);
+  });
+
+  it('extracts lookup results from experiment result output', () => {
+    const output = {
+      toolResults: [
+        {
+          type: 'tool-result',
+          payload: {
+            toolName: 'lookupOrderTool',
+            args: { orderId: 'A100' },
+            result: { found: true, status: 'shipped', estimatedDeliveryDays: 2 },
+          },
+        },
+      ],
+    };
+
+    expect(extractOrderLookupEvidence(output)).toEqual([
+      {
+        orderId: 'A100',
+        result: { found: true, status: 'shipped', estimatedDeliveryDays: 2 },
+      },
+    ]);
+  });
+
+  it('ignores incomplete calls and unrelated tools', () => {
+    const output = [
+      {
+        role: 'assistant',
+        content: {
+          toolInvocations: [
+            { state: 'call', toolName: 'lookupOrderTool', args: { orderId: 'A100' } },
+            { state: 'result', toolName: 'getRefundPolicyTool', args: {}, result: {} },
+          ],
+        },
+      },
+    ];
+
+    expect(extractOrderLookupEvidence(output)).toEqual([]);
+    expect(extractOrderLookupEvidence(null)).toEqual([]);
   });
 });
 
