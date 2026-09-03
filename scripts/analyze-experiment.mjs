@@ -149,11 +149,9 @@ function kmeans(points, k) {
 }
 
 function selectSamples(items, centroids) {
-  const visiblePool = items.filter(item => item.resultIndex < 10);
-  const pool = visiblePool.length >= SAMPLE_SIZE ? visiblePool : items;
   const selected = [];
   for (let cluster = 0; cluster < centroids.length && selected.length < SAMPLE_SIZE; cluster += 1) {
-    const candidates = pool
+    const candidates = items
       .filter(item => item.cluster === cluster)
       .map(item => ({
         item,
@@ -162,7 +160,7 @@ function selectSamples(items, centroids) {
       .sort((a, b) => a.rank - b.rank);
     if (candidates[0]) selected.push(candidates[0].item);
   }
-  for (const item of [...pool].sort((a, b) => Number(Boolean(b.traceId)) - Number(Boolean(a.traceId)) || b.signals.length - a.signals.length)) {
+  for (const item of [...items].sort((a, b) => Number(Boolean(b.traceId)) - Number(Boolean(a.traceId)) || b.signals.length - a.signals.length)) {
     if (selected.length >= SAMPLE_SIZE) break;
     if (!selected.includes(item)) selected.push(item);
   }
